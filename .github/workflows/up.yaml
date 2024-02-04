@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:test
       name: pypi
-      url: https://pypi.org/p/<your-pypi-project-name>
+      url: https://test.pypi.org/legacy/ dist/*
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
@@ -14,7 +14,7 @@ jobs:
     - name: Publish package distributions to TestPyPI
   uses: pypa/gh-action-pypi-publish@release/v1
   with:
-    repository-url: https://test.pypi.org/legacy/
+    repository-url: https://test.pypi.org/legacy/ dist/*
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
