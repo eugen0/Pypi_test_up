@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:test
       name: pypi
-      url: https://test.pypi.org/legacy/ dist/*
+      url: https://test.pypi.org/legacy/dist/*
     permissions:
       id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
